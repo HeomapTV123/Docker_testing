@@ -1,0 +1,295 @@
+/* ============================
+   GLOBAL STYLES
+============================ */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9eee3;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+
+/* Hide horizontal scrollbars */
+.recipe-slider::-webkit-scrollbar,
+.hero-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* ============================
+   TOP NAV + SEARCH
+============================ */
+.nav-search {
+    background: #fae9da;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    width: 120px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 480px;
+    background: #fff;
+    padding: 12px 18px;
+    border-radius: 50px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+/* ============================
+   LOGIN | REGISTER BUTTONS
+============================ */
+.login-buttons a {
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: 0.25s ease;
+}
+
+.login-buttons a:first-child {
+    color: #e14c4c;
+    border: 2px solid #e14c4c;
+}
+
+.login-buttons a:first-child:hover {
+    background: #e14c4c;
+    color: #fff;
+}
+
+.login-buttons a:last-child {
+    background: #e14c4c;
+    color: white;
+    border: 2px solid transparent;
+}
+
+.login-buttons a:last-child:hover {
+    background: #c73535;
+}
+
+/* ============================
+   DROPDOWN NAVIGATION
+============================ */
+.nav-select {
+    background: #fff;
+    padding: 12px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    list-style: none;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.menu > li > a:hover {
+    color: #e14c4c;
+}
+
+.dropdown {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    padding: 15px 0;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 999;
+}
+
+.menu li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+}
+
+.dropdown li a:hover {
+    background: #ffe5de;
+    color: #e14c4c;
+}
+
+/* ============================
+   HERO SLIDER
+============================ */
+.hero-slider-section {
+    margin: 40px auto;
+    padding: 0 40px;
+    position: relative;
+}
+
+#hero-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.hero-card {
+    min-width: 330px;
+    height: 220px;
+    background: #eee;
+    border-radius: 14px;
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.hero-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+}
+
+/* Arrow buttons */
+.slider-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #e14c4c;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background 0.2s;
+}
+
+.slider-btn:hover {
+    background: #c73535;
+}
+
+#hero-left {
+    left: 5px;
+}
+
+#hero-right {
+    right: 5px;
+}
+
+/* ============================
+   STATIC CATEGORY SLIDERS
+============================ */
+.recipe-slider-section {
+    margin: 60px 40px;
+    position: relative;
+}
+
+.recipe-slider-section h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.recipe-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.recipe-card {
+    min-width: 200px;
+    height: 160px;
+    background: #eee;
+    border-radius: 12px;
+    margin-right: 18px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipe-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    color: white;
+}
+
+.recipe-info h4 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.recipe-info p {
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Static slider buttons */
+.recipe-slider-section .slider-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+}
+
+.recipe-slider-section .slider-btn.left {
+    left: -10px;
+}
+
+.recipe-slider-section .slider-btn.right {
+    right: -10px;
+}
+
+
